@@ -1,0 +1,24 @@
+Shufflenet-v2-Pytorch 
+Introduction
+
+This is a Pytorch implementation of faceplusplus's ShuffleNet-v2. For details, please read the following papers: 
+	ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design
+
+Pretrained Models on ImageNet
+
+We provide pretrained ShuffleNet-v2 models on ImageNet, which achieve nearly accuracy with the original ones reported in the paper.
+
+The top-1/5 accuracy rates by using single center crop (crop size: 224x224, image size: 256xN): 
+Network 		Top-1 	Top-5	Top-1(reported in the paper) 
+ShuffleNet-v2 	69.390 	88.412	69.400
+
+Evaluate Models 
+python eval.py -a shufflenetv2  --evaluate=./shufflenetv2_x1_69.390_88.412.pth.tar ./ILSVRC2012/
+
+Version:
+Python2.7
+torch0.3.1
+torchvision0.2.1
+
+Dataset prepare Refer to https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md#download-the-imagenet-dataset
+
