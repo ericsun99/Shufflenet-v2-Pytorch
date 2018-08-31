@@ -13,7 +13,7 @@ Network 		Top-1 	Top-5	Top-1(reported in the paper)
 ShuffleNet-v2 		69.402 	88.374	69.400
 
 Evaluate Models 
-python eval.py -a shufflenetv2  --evaluate=./shufflenetv2_x1_69.390_88.412.pth.tar ./ILSVRC2012/
+python eval.py -a shufflenetv2  --evaluate=./shufflenetv2_x1_69.402_88.374.pth.tar ./ILSVRC2012/
 
 Version:
 Python2.7
