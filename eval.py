@@ -37,6 +37,7 @@ parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',
                     help='number of data loading workers (default: 4)')
 parser.add_argument('-b', '--batch-size', default=256, type=int,
                     metavar='N', help='mini-batch size (default: 256)')
+parser.add_argument('--width_mult',default=1.0, type=float)
 parser.add_argument('--evaluate', default='', type=str, metavar='PATH',
                     help='path to evaluate model (default: none)')
 
@@ -47,7 +48,7 @@ def main():
     # create model
     print("=> creating model '{}'".format(args.arch))
     if args.arch.startswith('shufflenetv2'):
-	model = shufflenetv2()
+	model = shufflenetv2(width_mult=args.width_mult)
     elif args.arch.startswith('mobilenetv2'):
 	model = MobileNetV2()
     else:
