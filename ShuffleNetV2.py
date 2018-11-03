@@ -118,7 +118,7 @@ class ShuffleNetV2(nn.Module):
         elif width_mult == 1.5:
             self.stage_out_channels = [-1, 24, 176, 352, 704, 1024]
         elif width_mult == 2.0:
-            self.stage_out_channels = [-1, 24, 224, 488, 976, 2048]
+            self.stage_out_channels = [-1, 24, 244, 488, 976, 2048]
         else:
             raise ValueError(
                 """{} groups is not supported for
